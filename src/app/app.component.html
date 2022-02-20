@@ -15,11 +15,32 @@
     width: 100%;
     text-align: center;
     background-color: #A0A0A0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .buttonLink, .buttonLink:visited {
+    background-color: #444444; /* this is supposed to be the defaukt button color */
+    color: #F0F0F0;
+    text-decoration: none;
+    border: solid;
+    appearance: button;
+    cursor: pointer;
+  }
+  .unstyled-link, .unstyled-link:visited {
+    color: inherit;
+    text-decoration: none;
   }
 </style>
 
 <div class="navbar">
-  Lista de Receitas
+  <div>
+    <a class="unstyled-link" routerLink="/">
+      Catálogo de receitas
+    </a>
+  </div>
+  <div><a id="list" class="buttonLink" routerLink="/ListRecipe">Ver receitas</a></div>
+  <div><a id="add" class="buttonLink" routerLink="/AddRecipe">Nova Receita</a></div>
 </div>
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->

@@ -7,17 +7,21 @@
     transform: translateY(-50%);
   }
   .buttonLink {
-    background-color: gray; /* this is supposed to be the defaukt button colof */
+    background-color: #444444; /* this is supposed to be the defaukt button color */
+    color: #F0F0F0;
     text-decoration: none;
     border: solid;
     appearance: button;
     cursor: pointer;
   }
+  .buttonLink:visited {
+    color: #F0F0F0
+  }
 </style>
 
 <div class="menu">
 
-  <a id="add" class="buttonLink" routerLink="/AddRecipe">Adicionar receita</a>
-  <a id="see" class="buttonLink" routerLink="/ListRecipe">Ver receitas</a>
+  <h1>Catálogo de Receitas</h1>
+  <p>Organize todas as suas receitas em um só lugar!</p>
  
 </div>
