@@ -6,7 +6,7 @@
     margin: 50vh auto auto auto;
     transform: translateY(-50%);
   }
-  .buttonLink {
+  .buttonLink, .buttonLink:visited  {
     background-color: #444444; /* this is supposed to be the defaukt button color */
     color: #F0F0F0;
     text-decoration: none;
@@ -14,11 +14,23 @@
     appearance: button;
     cursor: pointer;
   }
-  .buttonLink:visited {
-    color: #F0F0F0
+  .buttonContainer {
+    margin: 20px 0 0 0;
   }
 </style>
 
 <div class="menu">
-  <p>Nova Receita</p>
+  <h1>Nova Receita</h1>
+  <form>
+    <p>Título</p>
+    <input type="text" name="title" placeholder="Insira o título da receita..." />
+    <p>Descrição</p>
+    <textarea type="text" name="description" placeholder="Digite aqui sua receita..." 
+    rows="5" cols="16"></textarea>
+    <p>Imagem</p>
+    <input type="text" name="image" placeholder="Digite aqui o link para a imagem da sua receita..." />
+    <div class="buttonContainer">
+      <button type="submit">Publicar receita....</button>
+    </div>
+  </form>
 </div>

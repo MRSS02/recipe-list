@@ -6,7 +6,7 @@
     margin: 50vh auto auto auto;
     transform: translateY(-50%);
   }
-  .buttonLink {
+  .buttonLink, .buttonLink:visited  {
     background-color: #444444; /* this is supposed to be the defaukt button color */
     color: #F0F0F0;
     text-decoration: none;
@@ -14,11 +14,14 @@
     appearance: button;
     cursor: pointer;
   }
-  .buttonLink:visited {
-    color: #F0F0F0
-  }
+
 </style>
 
 <div class="menu">
- <p>Ver receitas</p>
+ <h1>Ver receitas</h1>
+ <div *ngFor="let recipe of recipes">
+    <h2>{{recipe.name}}</h2>
+    <p>{{recipe.description}}</p>
+    <img src={{recipe.image}} />
+ </div>
 </div>
