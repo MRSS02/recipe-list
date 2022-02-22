@@ -21,8 +21,8 @@
  <h1>Listagem de Receitas</h1>
  <div *ngFor="let recipe of recipes">
     <h2>{{recipe.name}}</h2>
-    <img [src]="recipe.image" />
-    <p>{{recipe.description}}</p>
-    
+    <a class="buttonLink" [routerLink]="'view?id=' + recipe.id">Ver mais</a> 
+    <a class="buttonLink" [routerLink]="'edit?id=' + recipe.id">Ver mais</a> 
+    <button class="buttonLink">Excluir</button> 
  </div>
 </div>

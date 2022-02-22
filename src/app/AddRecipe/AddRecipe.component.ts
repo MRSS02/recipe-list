@@ -18,12 +18,17 @@ export class AddRecipeComponent implements OnInit {
     this.RecipeDataService.addToList(recipe)
   }
 
+  getNextId(): number {
+    return this.RecipeDataService.getLastId() + 1
+  }
+
   onSubmit(form: any) {
     console.log()
     const recipe: Recipe = {
       name: form.form.value.name,
       description: form.form.value.description,
-      image: form.form.value.image
+      image: form.form.value.image,
+      id: this.getNextId()
     }
     this.addRecipe(recipe)
   }
