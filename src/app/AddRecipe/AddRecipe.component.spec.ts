@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AddRecipeComponent } from './add-recipe.component';
+import { AddRecipeComponent } from './AddRecipe.component';
 
 describe('AddRecipeComponent', () => {
   let component: AddRecipeComponent;

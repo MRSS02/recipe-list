@@ -1,6 +1,5 @@
 export type Recipe = {
   name: string,
-  ingredients: string,
-  preparation: string,
+  description: string,
   image: string
 }

@@ -19,21 +19,33 @@
   }
 </style>
 
+<!-- <script>
+  function register(event) {
+    event.preventDefault()
+    console.log("aaaa")
+    let recipe = {
+      name: event.target.name.value,
+      description: event.target.name.value,
+      image: event.target.image.value,
+    }
+    {{addRecipe(recipe)}}
+  }
+</script> -->
+
 <div class="menu">
-  <h1>Nova Receita</h1>
-  <form>
+  <h1>Cadastrar nova Receita</h1>
+  <form (ngSubmit)="onSubmit(form)" 
+  #form="ngForm">
     <p>Título</p>
-    <input type="text" name="title" placeholder="Insira o título da receita..." />
-    <p>Ingredientes</p>
-    <textarea type="text" name="ingredients" placeholder="Digite aqui sua receita..." 
-    rows="5" cols="16"></textarea>
-    <p>Modo de preparo</p>
-    <textarea type="text" name="preparation" placeholder="Digite aqui sua receita..." 
-    rows="5" cols="16"></textarea>
+    <input type="text" name="name" placeholder="Insira o título da receita..." ngModel />
+    <p>Descrição</p>
+    <textarea type="text" name="description" placeholder="Digite aqui sua receita..." 
+    rows="5" cols="16" ngModel></textarea>
     <p>Imagem</p>
-    <input type="text" name="image" placeholder="Digite aqui o link para a imagem da sua receita..." />
+    <input type="text" name="image" placeholder="Digite aqui o link para a imagem da sua receita..." 
+    ngModel/>
     <div class="buttonContainer">
-      <button type="submit">Publicar receita....</button>
+      <button type="submit">Cadastrar Receita....</button>
     </div>
   </form>
 </div>

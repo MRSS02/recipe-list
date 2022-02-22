@@ -18,14 +18,11 @@
 </style>
 
 <div class="menu">
- <h1>Ver receitas</h1>
+ <h1>Listagem de Receitas</h1>
  <div *ngFor="let recipe of recipes">
     <h2>{{recipe.name}}</h2>
     <img [src]="recipe.image" />
-    <h3>Ingredientes</h3>
-    <p>{{recipe.ingredients}}</p>
-    <h3>Modo de preparo</h3>
-    <p>{{recipe.preparation}}</p>
+    <p>{{recipe.description}}</p>
     
  </div>
 </div>
