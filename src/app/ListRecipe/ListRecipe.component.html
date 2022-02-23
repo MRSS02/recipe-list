@@ -1,5 +1,5 @@
 <style>
-  .menu {
+  .list {
     width: 50%;
     text-align: center;
     height: 100%;
@@ -14,15 +14,30 @@
     appearance: button;
     cursor: pointer;
   }
+  .buttonsContainer {
+    display: flex;
+    gap: 25px;
+  }
+  .recipe {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+  }
 
 </style>
 
-<div class="menu">
+<div class="list" *ngIf="route.children.length === 0">
  <h1>Listagem de Receitas</h1>
- <div *ngFor="let recipe of recipes">
+ <div class="recipe" *ngFor="let recipe of recipes">
     <h2>{{recipe.name}}</h2>
-    <a class="buttonLink" [routerLink]="'view?id=' + recipe.id">Ver mais</a> 
-    <a class="buttonLink" [routerLink]="'edit?id=' + recipe.id">Ver mais</a> 
-    <button class="buttonLink">Excluir</button> 
+    <div class="buttonsContainer">
+      <a class="buttonLink" [routerLink]="['/list/details', recipe.id]">Ver mais</a> 
+      <a class="buttonLink" [routerLink]="['/list/edit', recipe.id]">Editar</a> 
+      <button class="buttonLink">Excluir</button> 
+    </div>
  </div>
 </div>
+
+<router-outlet></router-outlet>
