@@ -1,1 +1,38 @@
-<p>recipe-edit works!</p>
+<style>
+  .menu {
+    width: 50%;
+    text-align: center;
+    height: 100%;
+    margin: 50vh auto auto auto;
+    transform: translateY(-50%);
+  }
+  .buttonLink, .buttonLink:visited  {
+    background-color: #444444; /* this is supposed to be the defaukt button color */
+    color: #F0F0F0;
+    text-decoration: none;
+    border: solid;
+    appearance: button;
+    cursor: pointer;
+  }
+  .buttonContainer {
+    margin: 20px 0 0 0;
+  }
+</style>
+
+<div class="menu">
+  <h1>Atualizar Receita</h1>
+  <form (ngSubmit)="onSubmit(form)" 
+  #form="ngForm">
+    <p>Título</p>
+    <input type="text" name="name" placeholder="Insira o título da receita..." ngModel />
+    <p>Descrição</p>
+    <textarea type="text" name="description" placeholder="Digite aqui sua receita..." 
+    rows="5" cols="16" ngModel></textarea>
+    <p>Imagem</p>
+    <input type="text" name="image" placeholder="Digite aqui o link para a imagem da sua receita..." 
+    ngModel/>
+    <div class="buttonContainer">
+      <button type="submit">Atualizar Receita....</button>
+    </div>
+  </form>
+</div>

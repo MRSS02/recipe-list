@@ -28,4 +28,9 @@ export class RecipeDataService {
   getRecipeById(id: number): Recipe {
     return this.recipes.find(recipe => recipe.id === id)!
   } 
+  updateRecipe(recipe: Recipe, id: number) {
+    console.log(recipe, id)
+    let index: number = this.recipes.findIndex(recipe => recipe.id === id)
+    this.recipes[index] = recipe
+  }
 }

@@ -16,10 +16,22 @@ export class EditRecipeComponent implements OnInit {
   }
   constructor(private list: RecipeDataService, private route: ActivatedRoute) { }
 
+  onSubmit(form: any) {
+    console.log()
+    const recipe: Recipe = {
+      name: form.form.value.name,
+      description: form.form.value.description,
+      image: form.form.value.image,
+      id: this.recipe.id
+    }
+    this.list.updateRecipe(recipe, this.recipe.id)
+  }
+
   ngOnInit(): void {
     this.route.params.subscribe(
       (params) => {
-        this.recipe = this.list.getRecipeById(params["id"]);
+        this.recipe = this.list.getRecipeById(parseInt(params["id"]));
+        console.log(this.recipe)
       }
     )
   }
