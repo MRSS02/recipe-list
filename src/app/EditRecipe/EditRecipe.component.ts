@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
-import { switchMap } from 'rxjs';
 import { RecipeDataService } from '../recipe-data.service';
 import { Recipe } from '../type-recipe';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-edit-recipe',
@@ -17,7 +16,7 @@ export class EditRecipeComponent implements OnInit {
   }
   constructor(private list: RecipeDataService, private route: ActivatedRoute) { }
 
-  onSubmit(form: any) {
+  onSubmit(form: NgForm) {
     console.log()
     const recipe: Recipe = {
       name: form.form.value.name,
