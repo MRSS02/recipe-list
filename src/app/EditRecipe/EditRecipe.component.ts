@@ -16,27 +16,34 @@ export class EditRecipeComponent implements OnInit {
   public recipe: Recipe = {
     name: "", description: "", image: "", id: 0
   }
+  public invalidFields: Array<boolean> = [false, false, false]
+  
   constructor(private list: RecipeDataService, private route: ActivatedRoute, 
     private router: Router, private toastr: ToastrService) { }
 
   onSubmit(form: NgForm) {
-    console.log()
+
     const recipe: Recipe = {
       name: form.form.value.name,
       description: form.form.value.description,
       image: form.form.value.image,
       id: this.recipe.id
     }
-    if (recipe.name !== "" && recipe.description !== "" && recipe.image !== "") {
-      this.list.updateRecipe(recipe, this.recipe.id)
-    } else {
-      this.alertInvalidField(
-        recipe.name === "" ? '"Título"' : 
-        recipe.description === "" ? '"Descrição"' :
-        '"Imagem"' 
-      )
-    }
-    this.router.navigate(['/'])
+    this.invalidFields = [!recipe.name, !recipe.description, 
+      !recipe.image]
+      console.log(this.invalidFields)
+      if (this.invalidFields.find(field => field)) {
+        this.alertInvalidField(
+          this.invalidFields[0] ? '"Título"' : 
+          this.invalidFields[1] ? '"Descrição"' :
+          '"Imagem"' 
+        )
+      } else {
+        this.list.updateRecipe(recipe, this.recipe.id)
+        this.router.navigate(['/'])
+      }
+
+
   }
 
   alertInvalidField(field: string) {

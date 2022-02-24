@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { RecipeDataService } from '../recipe-data.service';
 import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
@@ -12,9 +12,10 @@ import { Recipe } from '../type-recipe';
 })
 export class AddRecipeComponent implements OnInit {
 
-  //recipe = null;
-  constructor(public RecipeDataService: RecipeDataService, 
-  private router: Router, private toastr: ToastrService) { }
+  public invalidFields: Array<boolean> = [false, false, false]
+
+  constructor(public RecipeDataService: RecipeDataService,
+  private router: Router, private toastr: ToastrService,) { }
 
   addRecipe(recipe: Recipe) {
     this.RecipeDataService.addToList(recipe)
@@ -31,16 +32,19 @@ export class AddRecipeComponent implements OnInit {
       image: form.form.value.image,
       id: this.getNextId()
     }
-    if (recipe.name !== "" && recipe.description !== "" && recipe.image !== "") {
+    this.invalidFields = [!recipe.name, !recipe.description, 
+    !recipe.image]
+    console.log(this.invalidFields)
+    if (this.invalidFields.find(field => field)) {
+      this.alertInvalidField(
+        this.invalidFields[0] ? '"Título"' : 
+        this.invalidFields[1] ? '"Descrição"' :
+        '"Imagem"' 
+      )
+    } else {
       this.addRecipe(recipe)
       form.reset()
       this.alertSucess()
-    } else {
-      this.alertInvalidField(
-        recipe.name === "" ? '"Título"' : 
-        recipe.description === "" ? '"Descrição"' :
-        '"Imagem"' 
-      )
     }
 
   }

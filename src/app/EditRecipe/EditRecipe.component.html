@@ -17,6 +17,10 @@
   .buttonContainer {
     margin: 20px 0 0 0;
   }
+  .warning {
+    color: red;
+    border-color: red;
+  }
 </style>
 
 <div class="menu">
@@ -25,13 +29,14 @@
   #form="ngForm">
     <p>Título</p>
     <input type="text" name="name" placeholder="Insira o título da receita..."
-    [(ngModel)]="recipe.name" />
+    [(ngModel)]="recipe.name" [ngClass]="{'warning': invalidFields[0]}" />
     <p>Descrição</p>
     <textarea type="text" name="description" placeholder="Digite aqui sua receita..." 
-    rows="5" cols="16" [(ngModel)]="recipe.description" ></textarea>
+    rows="5" cols="16" [(ngModel)]="recipe.description" 
+    [ngClass]="{'warning': invalidFields[1]}"></textarea>
     <p>Imagem</p>
     <input type="text" name="image" placeholder="Digite aqui o link para a imagem da sua receita..." 
-    [(ngModel)]="recipe.image" />
+    [(ngModel)]="recipe.image" [ngClass]="{'warning': invalidFields[2]}" />
     <div class="buttonContainer">
       <button type="submit">Salvar</button>
     </div>
