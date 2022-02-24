@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RecipeDataService } from '../recipe-data.service';
-import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
 
 import { Recipe } from '../type-recipe';
 @Component({
@@ -11,7 +12,7 @@ import { Recipe } from '../type-recipe';
 export class AddRecipeComponent implements OnInit {
 
   //recipe = null;
-  constructor(public RecipeDataService: RecipeDataService) { }
+  constructor(public RecipeDataService: RecipeDataService, private router: Router) { }
 
   addRecipe(recipe: Recipe) {
     console.log("i can reach addRecipe")
@@ -22,8 +23,7 @@ export class AddRecipeComponent implements OnInit {
     return this.RecipeDataService.getLastId() + 1
   }
 
-  onSubmit(form: any) {
-    console.log()
+  onSubmit(form: NgForm) {
     const recipe: Recipe = {
       name: form.form.value.name,
       description: form.form.value.description,
@@ -31,6 +31,7 @@ export class AddRecipeComponent implements OnInit {
       id: this.getNextId()
     }
     this.addRecipe(recipe)
+    this.router.navigate(['/list'])
   }
   
   ngOnInit(): void {

@@ -12,6 +12,9 @@ export class ListRecipeComponent implements OnInit {
 
   public recipes: Array<Recipe> = []
   constructor(public route: ActivatedRoute, private list: RecipeDataService) { }
+  delete(id: number) {
+    this.list.deleteRecipe(id)
+  } 
   ngOnInit(): void {
     this.recipes = this.list.getRecipeList();
   }

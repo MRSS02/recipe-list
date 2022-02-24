@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { RecipeDataService } from '../recipe-data.service';
+import { Router } from '@angular/router';
 import { Recipe } from '../type-recipe';
 import { NgForm } from '@angular/forms';
 
@@ -14,7 +15,7 @@ export class EditRecipeComponent implements OnInit {
   public recipe: Recipe = {
     name: "", description: "", image: "", id: 0
   }
-  constructor(private list: RecipeDataService, private route: ActivatedRoute) { }
+  constructor(private list: RecipeDataService, private route: ActivatedRoute, private router: Router) { }
 
   onSubmit(form: NgForm) {
     console.log()
@@ -25,6 +26,7 @@ export class EditRecipeComponent implements OnInit {
       id: this.recipe.id
     }
     this.list.updateRecipe(recipe, this.recipe.id)
+    this.router.navigate(['/list'])
   }
 
   ngOnInit(): void {

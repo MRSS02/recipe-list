@@ -35,7 +35,7 @@
     <div class="buttonsContainer">
       <a class="buttonLink" [routerLink]="['/list/details', recipe.id]">Ver mais</a> 
       <a class="buttonLink" [routerLink]="['/list/edit', recipe.id]">Editar</a> 
-      <button class="buttonLink">Excluir</button> 
+      <button class="buttonLink" (click)="delete(recipe.id)">Excluir</button> 
     </div>
  </div>
 </div>
