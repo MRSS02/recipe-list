@@ -30,11 +30,17 @@
 
 <div class="list" *ngIf="route.children.length === 0">
  <h1>Listagem de Receitas</h1>
+ <div class="recipe" *ngIf="recipes.length === 0">
+    <p>
+      Não há receitas para exibir. Que tal 
+      <a routerLink="/add">Cadastrar uma nova receita</a>?
+    </p>
+ </div>
  <div class="recipe" *ngFor="let recipe of recipes">
     <h2>{{recipe.name}}</h2>
     <div class="buttonsContainer">
-      <a class="buttonLink" [routerLink]="['/list/details', recipe.id]">Ver mais</a> 
-      <a class="buttonLink" [routerLink]="['/list/edit', recipe.id]">Editar</a> 
+      <a class="buttonLink" [routerLink]="['/details', recipe.id]">Ver mais</a> 
+      <a class="buttonLink" [routerLink]="['/edit', recipe.id]">Editar</a> 
       <button class="buttonLink" (click)="delete(recipe.id)">Excluir</button> 
     </div>
  </div>
