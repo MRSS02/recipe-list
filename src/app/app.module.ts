@@ -6,16 +6,16 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { AddRecipeComponent } from './AddRecipe/AddRecipe.component';
 import { ListRecipeComponent } from './ListRecipe/ListRecipe.component';
-import { MainMenuComponent } from './MainMenu/MainMenu.component';
 import { RecipeDetailComponent } from './RecipeDetail/RecipeDetail.component';
 import { EditRecipeComponent } from './EditRecipe/EditRecipe.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddRecipeComponent,
     ListRecipeComponent,
-    MainMenuComponent,
     RecipeDetailComponent,
     EditRecipeComponent
   ],
@@ -23,7 +23,9 @@ import { EditRecipeComponent } from './EditRecipe/EditRecipe.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    RouterModule
+    RouterModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
     
   ],
   providers: [],

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RecipeDataService } from '../recipe-data.service';
 import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 import { Recipe } from '../type-recipe';
 @Component({
@@ -12,10 +13,10 @@ import { Recipe } from '../type-recipe';
 export class AddRecipeComponent implements OnInit {
 
   //recipe = null;
-  constructor(public RecipeDataService: RecipeDataService, private router: Router) { }
+  constructor(public RecipeDataService: RecipeDataService, 
+  private router: Router, private toastr: ToastrService) { }
 
   addRecipe(recipe: Recipe) {
-    console.log("i can reach addRecipe")
     this.RecipeDataService.addToList(recipe)
   }
 
@@ -30,8 +31,28 @@ export class AddRecipeComponent implements OnInit {
       image: form.form.value.image,
       id: this.getNextId()
     }
-    this.addRecipe(recipe)
-    this.router.navigate(['/list'])
+    if (recipe.name !== "" && recipe.description !== "" && recipe.image !== "") {
+      this.addRecipe(recipe)
+      form.reset()
+      this.alertSucess()
+    } else {
+      this.alertInvalidField(
+        recipe.name === "" ? '"Título"' : 
+        recipe.description === "" ? '"Descrição"' :
+        '"Imagem"' 
+      )
+    }
+
+  }
+
+  alertSucess() {
+    console.log("success")
+    this.toastr.success('Receita cadastrada com sucesso');
+  }
+
+  alertInvalidField(field: string) {
+    console.log("failuire")
+    this.toastr.warning(`Campo ${field} não pode ser vazio`)
   }
   
   ngOnInit(): void {

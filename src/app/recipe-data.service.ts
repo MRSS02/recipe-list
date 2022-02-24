@@ -36,7 +36,7 @@ export class RecipeDataService {
   deleteRecipe(id: number) {
     window.confirm(
       `Deletar receita "${this.recipes[this.recipes.findIndex(recipe => recipe.id === id)].name}"?`) 
-    this.recipes.splice(
-      this.recipes.findIndex(recipe => recipe.id === id), 1)
+    && this.recipes.splice(
+    this.recipes.findIndex(recipe => recipe.id === id), 1)
   }
 }
