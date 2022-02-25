@@ -2,9 +2,9 @@
 
   <a class="goBack" routerLink="/">← Voltar</a>
   <div class="content">
-    <h1>{{recipe.name}}</h1>
-    <p>{{recipe.description}}</p>
-    <img class="image" [src]="recipe.image" />
+    <h1 class="title">{{recipe.name}}</h1>
+    <img class="image" [src]="recipe.image" alt="(Imagem não encontrada)" />
+    <p class="description">{{recipe.description}}</p>
   </div>
  
 </div>
