@@ -33,6 +33,10 @@
   text-decoration: none;
   color: #77C3EC;
 }
+.creditLink:hover {
+  filter: brightness(0.75);
+  transition: 0.2s ease;
+}
 .appName {
   margin: 15px 0;
   font-size: 1.5rem;

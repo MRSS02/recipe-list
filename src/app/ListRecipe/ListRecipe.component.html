@@ -3,7 +3,7 @@
  <div class="recipe" *ngIf="recipes.length === 0">
     <p>
       Não há receitas para exibir. Que tal 
-      <a routerLink="/add">Cadastrar uma nova receita</a>?
+      <a routerLink="/add" class="noRecipe">Cadastrar uma nova receita</a>?
     </p>
  </div>
  <div class="recipe" *ngFor="let recipe of recipes">
