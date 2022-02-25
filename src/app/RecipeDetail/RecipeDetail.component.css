@@ -28,11 +28,14 @@
 }
 
 @media screen and (max-width: 768px) {
+  .content::before {
+    content: "padding"; /* i had problems implementiing the top-margin, 
+    and making it absolute broke the footer, so 
+    i did this as a last resort */ 
+    visibility: hidden;
+  }
   .content {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 40px;
+    margin-top: 50px;
   }
 }
 
