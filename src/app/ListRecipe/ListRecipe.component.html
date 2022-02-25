@@ -1,9 +1,9 @@
 <div class="list" *ngIf="route.children.length === 0">
  <h1>Listagem de Receitas</h1>
  <div class="recipe" *ngIf="recipes.length === 0">
-    <p>
+    <p class="noRecipe">
       Não há receitas para exibir. Que tal 
-      <a routerLink="/add" class="noRecipe">Cadastrar uma nova receita</a>?
+      <a routerLink="/add" class="link">Cadastrar uma nova receita</a>?
     </p>
  </div>
  <div class="recipe" *ngFor="let recipe of recipes">

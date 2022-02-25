@@ -41,11 +41,15 @@
   left: 0;
   bottom: 0;
 }
-.noRecipe, noRecipe:visited {
+.noRecipe {
+  width: 100%;
+  text-align: center;
+}
+.link, .link:visited {
   text-decoration: none;
   color: #009DFF;
 }
-.noRecipe:hover {
+.link:hover {
   filter: brightness(0.75);
   transition: 0.2s ease;
 }
@@ -62,10 +66,7 @@
   }
 
 }
-@media screen and (max-width: 768px) {
-  
 
-}
 @media screen and (max-width: 576px) {
   .list {
     margin-top: 250px;
