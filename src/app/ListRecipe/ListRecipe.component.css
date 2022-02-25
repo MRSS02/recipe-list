@@ -1,0 +1,47 @@
+.list {
+  width: 100%;
+  text-align: center;
+  margin: 180px auto auto auto;
+  color: #4B3621;
+}
+.title {
+  min-width: 100px;
+  padding: 0;
+}
+.buttonLink, .buttonLink:visited  {
+  appearance: button;
+  width: 80px;
+  margin-top: 10px;
+  padding: 10px 20px;
+  color: #F0F0F0;
+  text-decoration: none;
+  background-color: #4B3621;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #4B3621;
+  cursor: pointer;
+}
+.buttonsContainer {
+  display: flex;
+  gap: 25px;
+}
+.recipe {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+@media screen and (max-width: 768px) {
+  .recipe {
+    flex-direction: column;
+    gap: 0;
+  }
+
+}
+@media screen and (max-width: 576px) {
+  .buttonsContainer {
+    flex-direction: column;
+    gap: 0;
+  }
+}
