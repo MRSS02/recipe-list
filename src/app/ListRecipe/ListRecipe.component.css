@@ -7,6 +7,8 @@
 }
 .title {
   min-width: 100px;
+  float: left;
+  text-align: left;
 }
 .buttonLink, .buttonLink:visited  {
   appearance: button;
@@ -45,10 +47,11 @@
     gap: 0;
     padding-bottom: 16px;
   }
-  
-  /* .recipe::after {
-    width: 90%;
-  } */
+  .title {
+    float: center;
+    text-align: center;
+  }
+
 }
 @media screen and (max-width: 768px) {
   
