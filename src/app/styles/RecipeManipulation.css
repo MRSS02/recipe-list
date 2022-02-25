@@ -18,16 +18,10 @@
 }
 
 .goBack, .goBack:visited  {
-  background-color: #4B3621;
-  color: #F0F0F0;
   text-decoration: none;
-  border: solid;
-  border-radius: 10px;
-  border-color: #4B3621;
   padding: 10px 20px;
   margin: 0;
   appearance: button;
-  cursor: pointer;
   float: left;
 }
 .title {
@@ -75,12 +69,6 @@
   width: 300px;
   margin-top: 10px;
   padding: 10px 20px;
-  color: #F0F0F0;
-  background-color: #4B3621;
-  border-radius: 10px;
-  border-style: solid;
-  border-color: #4B3621;
-  cursor: pointer;
 }
 .label {
   font-weight: 600;

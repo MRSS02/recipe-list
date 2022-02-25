@@ -9,16 +9,10 @@
   margin-bottom: 40px;
 }
 .goBack, .goBack:visited  {
-  background-color: #4B3621;
-  color: #F0F0F0;
   text-decoration: none;
-  border: solid;
-  border-radius: 10px;
-  border-color: #4B3621;
   padding: 10px 20px;
   margin: 0;
   appearance: button;
-  cursor: pointer;
   float: left;
 }
 .content {

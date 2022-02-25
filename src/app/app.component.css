@@ -41,14 +41,8 @@
   color: #F0F0F0;
 }
 .buttonLink, .buttonLink:visited {
-  background-color: #F0F0F0; /* this is supposed to be the default button color */
-  color: #4B3621;
   text-decoration: none;
-  border: solid;
-  border-color: #F0F0F0;
-  border-radius: 10px;
   appearance: button;
-  cursor: pointer;
   margin: 5px 10px;
   padding: 5px 10px;
 }

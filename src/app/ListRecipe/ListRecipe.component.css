@@ -13,13 +13,7 @@
   width: 102px;
   margin: 0px;
   padding: 10px 20px;
-  color: #F0F0F0;
   text-decoration: none;
-  background-color: #4B3621;
-  border-radius: 10px;
-  border-style: solid;
-  border-color: #4B3621;
-  cursor: pointer;
 }
 .buttonsContainer {
   display: flex;

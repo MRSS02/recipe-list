@@ -1,6 +1,6 @@
 <div class="formWrapper">
   <div class="header">
-    <a class="goBack" routerLink="/">← Voltar</a>
+    <a class="goBack brown" routerLink="/">← Voltar</a>
     <h1 class="title">Editar Receita - {{recipe.name}}</h1>
   </div>
   <form (ngSubmit)="onSubmit(form)" class="formContainer"
@@ -16,7 +16,7 @@
     <input type="text" class="textInput" name="image" placeholder="Digite aqui o link para a imagem da sua receita..." 
     [(ngModel)]="recipe.image" [ngClass]="{'warning': invalidFields[2]}" />
     <div class="buttonContainer">
-      <button class="submit" type="submit">Salvar</button>
+      <button type="submit" class="submit brown">Salvar</button>
     </div>
   </form>
 </div>

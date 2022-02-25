@@ -1,2 +1,42 @@
 @import '~ngx-toastr/toastr.css';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #DEB887;
+  overflow-x: hidden;
+  margin: 0;
+}
+textarea {
+  resize: none;
+} 
+.brown, .white {
+  transition: 0.1s ease-out;
+  border: solid;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.brown:active, .white:active {
+  filter: brightness(0.75);
+  transition: 0.2s ease-in;
+}
+.brown {
+  background-color: #4B3621;
+  color: #F0F0F0;
+  border-color: #4B3621;
+}
+.brown:hover {
+  transition: 0.3s ease;
+  color: #4B3621;
+  background-color: #F0F0F0;
+}
+.white {
+  background-color: #F0F0F0; 
+  color: #4B3621;
+  border-color: #F0F0F0;
+  cursor: pointer;
+}
+.white:hover {
+  transition: 0.3s ease;
+  color: #F0F0F0;
+  background-color: #4B3621;
+}

@@ -9,9 +9,9 @@
  <div class="recipe" *ngFor="let recipe of recipes">
     <h2 class="title">{{recipe.name}}</h2>
     <div class="buttonsContainer">
-      <a class="buttonLink" [routerLink]="['/details', recipe.id]">Ver Detalhes</a> 
-      <a class="buttonLink" [routerLink]="['/edit', recipe.id]">Editar</a> 
-      <a class="buttonLink" (click)="delete(recipe.id)">Excluir</a> 
+      <a class="buttonLink brown" [routerLink]="['/details', recipe.id]">Ver Detalhes</a> 
+      <a class="buttonLink brown" [routerLink]="['/edit', recipe.id]">Editar</a> 
+      <a class="buttonLink brown" (click)="delete(recipe.id)">Excluir</a> 
     </div>
  </div>
 </div>
