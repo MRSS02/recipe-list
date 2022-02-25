@@ -8,7 +8,7 @@ import { Recipe } from '../type-recipe';
 @Component({
   selector: 'app-add-recipe',
   templateUrl: './AddRecipe.component.html',
-  styleUrls: ['./AddRecipe.component.css']
+  styleUrls: ['../styles/RecipeManipulation.css']
 })
 export class AddRecipeComponent implements OnInit {
 
@@ -33,14 +33,14 @@ export class AddRecipeComponent implements OnInit {
       id: this.getNextId()
     }
     this.invalidFields = [!recipe.name, !recipe.description, 
-    !recipe.image]
-    console.log(this.invalidFields)
+    !recipe.image] //true for each invalid field, in sequence
+    console.log(recipe.image)
     if (this.invalidFields.find(field => field)) {
       this.alertInvalidField(
         this.invalidFields[0] ? '"Título"' : 
         this.invalidFields[1] ? '"Descrição"' :
         '"Imagem"' 
-      )
+      ) //first invalid field gets alerted
     } else {
       this.addRecipe(recipe)
       form.reset()

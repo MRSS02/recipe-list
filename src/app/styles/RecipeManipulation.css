@@ -1,0 +1,58 @@
+.formContainer {
+  width: 625px;
+  text-align: center;
+  height: 100%;
+  margin: 50vh auto auto auto;
+  transform: translateY(-50%);
+}
+.buttonLink, .buttonLink:visited  {
+  background-color: #444444; /* this is supposed to be the defaukt button color */
+  color: #F0F0F0;
+  text-decoration: none;
+  border: solid;
+  appearance: button;
+  cursor: pointer;
+}
+.buttonContainer {
+  margin: 20px 0 0 0;
+}
+.warning {
+  color: red;
+  border-color: red;
+  border-width: 2px;
+}
+.warning:focus {
+  outline-style: solid;
+  outline-width: 2px !important;
+  outline-color: red !important;
+}
+.textInput {
+  padding: 10px;
+  border-style: solid;
+  border-radius: 10px;
+  font-size: 1rem;
+  width: 100%;
+}
+.textInput:focus {
+  outline-style: solid;
+  outline-width: 3px;
+  outline-color: #A0A0A0;
+}
+.multiline {
+  width: 100%;
+}
+.submit {
+  width: 300px;
+  margin-top: 10px;
+  padding: 10px 20px;
+  color: #F0F0F0;
+  background-color: #4B3621;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #4B3621;
+}
+@media screen and (max-width: 768px) {
+  .formContainer {
+    width: 80%;
+  }
+}

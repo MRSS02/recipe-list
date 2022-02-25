@@ -28,17 +28,17 @@
   <form (ngSubmit)="onSubmit(form)" 
   #form="ngForm">
     <p>Título</p>
-    <input type="text" name="name" placeholder="Insira o título da receita..."
+    <input type="text" class="textInput" name="name" placeholder="Insira o título da receita..."
     [(ngModel)]="recipe.name" [ngClass]="{'warning': invalidFields[0]}" />
     <p>Descrição</p>
-    <textarea type="text" name="description" placeholder="Digite aqui sua receita..." 
+    <textarea type="text" class="textInput multiline" name="description" placeholder="Digite aqui sua receita..." 
     rows="5" cols="16" [(ngModel)]="recipe.description" 
     [ngClass]="{'warning': invalidFields[1]}"></textarea>
     <p>Imagem</p>
-    <input type="text" name="image" placeholder="Digite aqui o link para a imagem da sua receita..." 
+    <input type="text" class="textInput" name="image" placeholder="Digite aqui o link para a imagem da sua receita..." 
     [(ngModel)]="recipe.image" [ngClass]="{'warning': invalidFields[2]}" />
     <div class="buttonContainer">
-      <button type="submit">Salvar</button>
+      <button class="submit" type="submit">Salvar</button>
     </div>
   </form>
 </div>

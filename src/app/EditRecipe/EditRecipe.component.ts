@@ -9,7 +9,7 @@ import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-edit-recipe',
   templateUrl: './EditRecipe.component.html',
-  styleUrls: ['./EditRecipe.component.css']
+  styleUrls: ['../styles/RecipeManipulation.css']
 })
 export class EditRecipeComponent implements OnInit {
 
