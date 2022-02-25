@@ -29,6 +29,15 @@
   cursor: pointer;
   float: left;
 }
+.title {
+  position: absolute;
+  left: 50%;
+  margin-top: 0;
+  transform: translateX(-50%);
+}
+.titleWrapper {
+  margin-bottom: 50px;
+}
 .buttonContainer {
   margin: 20px 0 0 0;
 }
