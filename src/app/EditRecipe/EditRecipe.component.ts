@@ -40,10 +40,16 @@ export class EditRecipeComponent implements OnInit {
         )
       } else {
         this.list.updateRecipe(recipe, this.recipe.id)
+        this.alertSucess()
         this.router.navigate(['/'])
       }
 
 
+  }
+
+  alertSucess() {
+    console.log("success")
+    this.toastr.success('Receita editada com sucesso');
   }
 
   alertInvalidField(field: string) {

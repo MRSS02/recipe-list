@@ -48,6 +48,7 @@
   outline-color: red !important;
 }
 .textInput, .multiline {
+  box-shadow: 5px 5px 2px #90909090;
   font-family: inherit;
   font-size: inherit;
   width: 100%;

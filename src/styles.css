@@ -17,6 +17,7 @@ textarea {
 }
 .brown:active, .white:active {
   filter: brightness(0.75);
+  transform: scale(0.95);
   transition: 0.2s ease-in;
 }
 .brown {
