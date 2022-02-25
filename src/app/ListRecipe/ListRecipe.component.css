@@ -10,7 +10,7 @@
 }
 .buttonLink, .buttonLink:visited  {
   appearance: button;
-  width: 80px;
+  width: 102px;
   margin-top: 10px;
   padding: 10px 20px;
   color: #F0F0F0;
@@ -31,6 +31,11 @@
   justify-content: center;
   align-items: center;
   gap: 100px;
+}
+@media screen and (max-width: 992px) {
+  .recipe {
+    gap: 50px;
+  }
 }
 @media screen and (max-width: 768px) {
   .recipe {
