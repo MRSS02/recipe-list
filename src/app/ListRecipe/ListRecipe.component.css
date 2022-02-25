@@ -6,7 +6,6 @@
 }
 .title {
   min-width: 100px;
-  padding: 0;
 }
 .buttonLink, .buttonLink:visited  {
   appearance: button;
@@ -29,35 +28,51 @@
   display: flex;
   position: relative;
   align-content: center;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 100px;
-  padding: 20px 0;
+  margin: 0 14%;
+  padding: 0 2%;
 }
 .recipe::after {
   content: "";
   background: #4B3621;
-  width: 900px;
+  width: 100%;
   display: block;
   height: 3px;
   position: absolute;
+  left: 0;
   bottom: 0;
 }
 @media screen and (max-width: 992px) {
   .recipe {
-    gap: 50px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .recipe {
     flex-direction: column;
     gap: 0;
+    padding-bottom: 16px;
   }
+  
+  /* .recipe::after {
+    width: 90%;
+  } */
+}
+@media screen and (max-width: 768px) {
+  
 
 }
 @media screen and (max-width: 576px) {
+  .list {
+    margin-top: 250px;
+  }
+  .recipe {
+    justify-content: center;
+  }
   .buttonsContainer {
     flex-direction: column;
-    gap: 0;
+    width: 100%;
+    gap: 20px;
+  }
+  .buttonLink {
+    width: 100%;
+    box-sizing: border-box;
   }
 }
