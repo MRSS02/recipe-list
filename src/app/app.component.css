@@ -1,10 +1,17 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.navbar, .footer {
+  width: 100%;
+  text-align: center;
+  background-color: #4B3621;
+}
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  text-align: center;
-  background-color: #4B3621;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,6 +19,19 @@
   z-index: 1;
   border-radius: 0 0 24px 24px;
   padding-bottom: 20px;
+}
+.footer {
+  margin-top: auto;
+  width: 100%;
+  font-size: 1rem;
+  color: #F0F0F0;
+}
+.credits {
+  margin: 10px 0;
+}
+.creditLink {
+  text-decoration: none;
+  color: #77C3EC;
 }
 .appName {
   margin: 15px 0;

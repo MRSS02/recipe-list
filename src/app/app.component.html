@@ -1,11 +1,24 @@
-<div class="navbar">
-  <div>
-    <p class="appName">Catálogo de receitas</p>
-  </div>
-  <div class="linkContainer">
-    <a id="list" class="buttonLink" routerLink="/">Listagem de Receitas</a>
-    <a id="add" class="buttonLink" routerLink="/add">Cadastro de Receitas</a>
-  </div>
-</div>
+<div class="app">
+  <nav class="navbar">
+    <div>
+      <p class="appName">Catálogo de receitas</p>
+    </div>
+    <div class="linkContainer">
+      <a id="list" class="buttonLink" routerLink="/">Listagem de Receitas</a>
+      <a id="add" class="buttonLink" routerLink="/add">Cadastro de Receitas</a>
+    </div>
+  </nav>
 
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>
+
+  <footer class="footer">
+    <p class="credits">
+      2022 
+      <a class="creditLink" href="https://github.com/MRSS02"> MRSS</a>.
+      You can also
+      <a class="creditLink" href="https://github.com/MRSS02/recipe-list"> 
+        check the source code
+      </a>.
+    </p>
+  </footer>
+</div>
