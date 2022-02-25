@@ -20,13 +20,15 @@ textarea {
   transform: scale(0.95);
   transition: 0.2s ease-in;
 }
+.white:hover, .brown:hover {
+  transition: 0.3s ease;
+}
 .brown {
   background-color: #4B3621;
   color: #F0F0F0;
   border-color: #4B3621;
 }
-.brown:hover {
-  transition: 0.3s ease;
+.brown:hover, .brown:active {
   color: #4B3621;
   background-color: #F0F0F0;
 }
@@ -36,8 +38,7 @@ textarea {
   border-color: #F0F0F0;
   cursor: pointer;
 }
-.white:hover {
-  transition: 0.3s ease;
+.white:hover, .white:active {
   color: #F0F0F0;
   background-color: #4B3621;
 }
