@@ -3,6 +3,7 @@
   width: 90%;
   text-align: center;
   margin: 180px auto auto auto;
+  color: #4B3621;
 }
 .goBack, .goBack:visited  {
   background-color: #4B3621; /* this is supposed to be the defaukt button color */
