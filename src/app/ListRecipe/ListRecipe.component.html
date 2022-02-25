@@ -1,17 +1,25 @@
 <style>
   .list {
-    width: 50%;
+    width: 100%;
     text-align: center;
-    height: 100%;
-    margin: 50vh auto auto auto;
-    transform: translateY(-50%);
+    margin: 180px auto auto auto;
+    color: #4B3621;
+  }
+  .title {
+    min-width: 100px;
+    padding: 0;
   }
   .buttonLink, .buttonLink:visited  {
-    background-color: #444444; /* this is supposed to be the defaukt button color */
+    appearance: button;
+    width: 80px;
+    margin-top: 10px;
+    padding: 10px 20px;
     color: #F0F0F0;
     text-decoration: none;
-    border: solid;
-    appearance: button;
+    background-color: #4B3621;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #4B3621;
     cursor: pointer;
   }
   .buttonsContainer {
@@ -25,6 +33,19 @@
     align-items: center;
     gap: 100px;
   }
+  @media screen and (max-width: 768px) {
+    .recipe {
+      flex-direction: column;
+      gap: 0;
+    }
+
+  }
+  @media screen and (max-width: 576px) {
+    .buttonsContainer {
+      flex-direction: column;
+      gap: 0;
+    }
+  }
 
 </style>
 
@@ -37,11 +58,11 @@
     </p>
  </div>
  <div class="recipe" *ngFor="let recipe of recipes">
-    <h2>{{recipe.name}}</h2>
+    <h2 class="title">{{recipe.name}}</h2>
     <div class="buttonsContainer">
       <a class="buttonLink" [routerLink]="['/details', recipe.id]">Ver mais</a> 
       <a class="buttonLink" [routerLink]="['/edit', recipe.id]">Editar</a> 
-      <button class="buttonLink" (click)="delete(recipe.id)">Excluir</button> 
+      <a class="buttonLink" (click)="delete(recipe.id)">Excluir</a> 
     </div>
  </div>
 </div>

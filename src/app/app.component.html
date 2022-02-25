@@ -23,21 +23,27 @@
     color: #F0F0F0;
   }
   .buttonLink, .buttonLink:visited {
-    background-color: #444444; /* this is supposed to be the default button color */
-    color: #F0F0F0;
+    background-color: #F0F0F0; /* this is supposed to be the default button color */
+    color: #4B3621;
     text-decoration: none;
     border: solid;
     appearance: button;
     cursor: pointer;
+    margin: 20px 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
   }
   .linkContainer {
     display: flex;
+    margin: 10px 0;
     gap: 20px;
   }
-  .unstyled-link, .unstyled-link:visited {
-    color: inherit;
-    text-decoration: none;
+  @media screen and (max-width: 768px) {
+    .linkContainer {
+      flex-direction: column;
+    }
   }
+  
 </style>
 
 <div class="navbar">

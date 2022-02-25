@@ -1,9 +1,9 @@
 .formContainer {
   width: 625px;
   text-align: center;
-  height: 100%;
-  margin: 50vh auto auto auto;
-  transform: translateY(-50%);
+  margin: 180px auto 0 auto;
+  color: #4B3621;
+
 }
 .buttonLink, .buttonLink:visited  {
   background-color: #444444; /* this is supposed to be the defaukt button color */
@@ -28,6 +28,7 @@
 }
 .textInput {
   padding: 10px;
+  box-sizing: border-box;
   border-style: solid;
   border-radius: 10px;
   font-size: 1rem;
@@ -39,6 +40,7 @@
   outline-color: #A0A0A0;
 }
 .multiline {
+  font-family: 'Poppins', sans-serif;
   width: 100%;
 }
 .submit {
@@ -50,9 +52,18 @@
   border-radius: 10px;
   border-style: solid;
   border-color: #4B3621;
+  cursor: pointer;
+}
+
+.label {
+  font-weight: 600;
 }
 @media screen and (max-width: 768px) {
   .formContainer {
     width: 80%;
+    margin-top: 200px;
+  }
+  .submit {
+    width: 100%;
   }
 }

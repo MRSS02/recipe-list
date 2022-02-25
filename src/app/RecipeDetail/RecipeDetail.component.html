@@ -2,33 +2,41 @@
   .descriptionContainer {
     width: 90%;
     text-align: center;
-    height: 100%;
-    margin: 50vh auto auto auto;
-    transform: translateY(-50%);
+    margin: 180px auto auto auto;
   }
   .goBack, .goBack:visited  {
-    background-color: #444444; /* this is supposed to be the defaukt button color */
+    background-color: #4B3621; /* this is supposed to be the defaukt button color */
     color: #F0F0F0;
     text-decoration: none;
     border: solid;
+    border-radius: 10px;
+    border-color: #4B3621;
+    padding: 10px 20px;
+    margin: 0;
     appearance: button;
     cursor: pointer;
     float: left;
   }
   .content {
-    margin: auto;
-    padding-top: 20px;
+    margin: 0 auto;
+    padding: 0;
     width: 50%;
+  }
+  .image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: contain;
   }
 </style>
 
 <div class="descriptionContainer">
 
-  <a class="goBack" routerLink="/">Voltar</a>
+  <a class="goBack" routerLink="/">← Voltar</a>
   <div class="content">
     <h1>{{recipe.name}}</h1>
     <p>{{recipe.description}}</p>
-    <img [src]="recipe.image" />
+    <img class="image" [src]="recipe.image" />
   </div>
  
 </div>
