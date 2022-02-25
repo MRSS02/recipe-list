@@ -27,10 +27,21 @@
 }
 .recipe {
   display: flex;
+  position: relative;
   align-content: center;
   justify-content: center;
   align-items: center;
   gap: 100px;
+  padding-bottom: 20px;
+}
+.recipe::after {
+  content: "";
+  background: #4B3621;
+  width: 900px;
+  display: block;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
 }
 @media screen and (max-width: 992px) {
   .recipe {

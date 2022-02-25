@@ -25,19 +25,27 @@
   color: #4B3621;
   text-decoration: none;
   border: solid;
+  border-color: #F0F0F0;
+  border-radius: 10px;
   appearance: button;
   cursor: pointer;
-  margin: 20px 10px;
+  margin: 5px 10px;
   padding: 5px 10px;
-  border-radius: 10px;
 }
 .linkContainer {
   display: flex;
-  margin: 10px 0;
+  margin: 0;
   gap: 20px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 576px) {
   .linkContainer {
     flex-direction: column;
+    width: 80%;
+    margin: 10px 0;
+  }
+  .buttonLink {
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
   }
 }

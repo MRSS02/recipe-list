@@ -1,17 +1,33 @@
+.formWrapper {
+  width: 90%;
+  margin: 180px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  color: #4B3621;
+  text-align: center;
+}
+
 .formContainer {
   width: 625px;
   text-align: center;
-  margin: 180px auto 0 auto;
-  color: #4B3621;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
 }
-.buttonLink, .buttonLink:visited  {
-  background-color: #444444; /* this is supposed to be the defaukt button color */
+.goBack, .goBack:visited  {
+  background-color: #4B3621; /* this is supposed to be the defaukt button color */
   color: #F0F0F0;
   text-decoration: none;
   border: solid;
+  border-radius: 10px;
+  border-color: #4B3621;
+  padding: 10px 20px;
+  margin: 0;
   appearance: button;
   cursor: pointer;
+  float: left;
 }
 .buttonContainer {
   margin: 20px 0 0 0;

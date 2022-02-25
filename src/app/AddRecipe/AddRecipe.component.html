@@ -1,6 +1,8 @@
-<div class="formContainer">
-  <h1>Cadastrar nova Receita</h1>
-  <form (ngSubmit)="onSubmit(form)"
+<div class="formWrapper">
+  <div>
+    <h1>Cadastrar nova Receita</h1>
+  </div>
+  <form (ngSubmit)="onSubmit(form)" class="formContainer"
   #form="ngForm">
     <p class="label">Título</p>
     <input type="text" name="name" placeholder="Insira o título da receita..." 
