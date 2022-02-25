@@ -1,11 +1,3 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <style>
   .navbar {
@@ -16,17 +8,31 @@
     text-align: center;
     background-color: #4B3621;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     z-index: 1;
+    border-radius: 0 0 24px 24px;
+    padding-bottom: 20px;
+  }
+  .appName {
+    margin: 15px 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-style: italic;
+    color: #F0F0F0;
   }
   .buttonLink, .buttonLink:visited {
-    background-color: #444444; /* this is supposed to be the defaukt button color */
+    background-color: #444444; /* this is supposed to be the default button color */
     color: #F0F0F0;
     text-decoration: none;
     border: solid;
     appearance: button;
     cursor: pointer;
+  }
+  .linkContainer {
+    display: flex;
+    gap: 20px;
   }
   .unstyled-link, .unstyled-link:visited {
     color: inherit;
@@ -36,17 +42,12 @@
 
 <div class="navbar">
   <div>
-    Catálogo de receitas
+    <p class="appName">Catálogo de receitas</p>
   </div>
-  <div><a id="list" class="buttonLink" routerLink="/">Listagem de Receitas</a></div>
-  <div><a id="add" class="buttonLink" routerLink="/add">Cadastro de Receitas</a></div>
+  <div class="linkContainer">
+    <div><a id="list" class="buttonLink" routerLink="/">Listagem de Receitas</a></div>
+    <div><a id="add" class="buttonLink" routerLink="/add">Cadastro de Receitas</a></div>
+  </div>
 </div>
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <router-outlet></router-outlet>

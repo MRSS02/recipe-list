@@ -1,29 +1,4 @@
-<style>
-  .menu {
-    width: 50%;
-    text-align: center;
-    height: 100%;
-    margin: 50vh auto auto auto;
-    transform: translateY(-50%);
-  }
-  .buttonLink, .buttonLink:visited  {
-    background-color: #444444; /* this is supposed to be the defaukt button color */
-    color: #F0F0F0;
-    text-decoration: none;
-    border: solid;
-    appearance: button;
-    cursor: pointer;
-  }
-  .buttonContainer {
-    margin: 20px 0 0 0;
-  }
-  .warning {
-    color: red;
-    border-color: red;
-  }
-</style>
-
-<div class="menu">
+<div class="formContainer">
   <h1>Atualizar Receita - {{recipe.name}}</h1>
   <form (ngSubmit)="onSubmit(form)" 
   #form="ngForm">
